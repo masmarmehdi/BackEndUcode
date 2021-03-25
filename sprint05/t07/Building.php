@@ -61,7 +61,7 @@ class Building
             $el = "-";
         }
         
-        $props =["Floors : " . $this->floors,
+      $props =["Floors : " . $this->floors,
             "Material : " . $this->material,
             "Address : " . $this->address,
             "Elevator: " .  $el,
