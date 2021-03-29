@@ -1,12 +1,10 @@
 <?php
-
 /*
   Task 07 (resource (Base class Building))
   Task name: Tower
 */
 
-class Building
-{
+  class Building{
     protected $floors;
     protected $material;
     protected $address;
@@ -19,9 +17,9 @@ class Building
     */
     public function __construct(int $floors, string $material, string $address)
     {
-        $this->floors = $floors;
-        $this->material = $material;
-        $this->address = $address;
+      $this->floors = $floors;
+      $this->material = $material;
+      $this->address = $address;
     }
 
     /*
@@ -29,15 +27,15 @@ class Building
     */
     public function getFloors() : int
     {
-        return $this->floors;
+      return $this->floors;
     }
 
     /*
-      @return string
+        @return string
     */
     public function getMaterial() : string
     {
-        return $this->material;
+      return $this->material;
     }
 
     /*
@@ -45,35 +43,36 @@ class Building
     */
     public function getAddress() : string
     {
-        return $this->address;
+      return $this->address;
     }
 
-    /*
-      @return string
-    */
-    
+      /*
+        @return string
+      */
+      
     public function toString() : string
     {
-        if(Tower::hasElevator()){
-            $el = "+";
-        }
-        else{
-            $el = "-";
-        }
-        
+      if(Tower::hasElevator()){
+        $el = "+";
+      }
+      else{
+        $el = "-";
+      }
+          
       $props =["Floors : " . $this->floors,
-            "Material : " . $this->material,
-            "Address : " . $this->address,
-            "Elevator: " .  $el,
-            "Arc reactor capacity : " . Tower::getArcCapacity(),
-            "Height : " . Tower::getHeight(),
-            "Floor height : " . Tower::getFloorHeight()
-        ];
+              "Material : " . $this->material,
+              "Address : " . $this->address,
+              "Elevator: " .  $el,
+              "Arc reactor capacity : " . Tower::getArcCapacity(),
+              "Height : " . Tower::getHeight(),
+              "Floor height : " . Tower::getFloorHeight()
+      ];
 
-        $str = "";
+          $str = "";
 
-        foreach ($props as $p)
-            $str = $str . $p . "\n";
-        return $str;
+          foreach ($props as $p)
+              $str = $str . $p . "\n";
+          return $str;
     }
 }
+?>
