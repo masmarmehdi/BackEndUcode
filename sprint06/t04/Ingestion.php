@@ -4,17 +4,21 @@
         public $meal_type = array();
         public $day_of_diet;
         public $products = array();
-        public function __construct($id, $meal_type, $day_of_diet, $products){
-            $this->id = $id;
+        public function __construct($meal_type, $id){
             $this->meal_type  = $meal_type;
-            $this->day_of_diet = $day_of_diet;
-            $this->products = $products;
+            $this->id = $id;
         }
         public function get_from_fridge($product){
-            $this->product;
+            $productKcal = $this->products[$product]->kcal_per_portion;
+            if($productKcal > 200){
+                throw new EatException("$product is Junk food. ");
+            }
         }
-        public function getProduct($name){
-            echo $this->products;
+        public function setProduct($prdct){
+            $this->products[$prdct->getName()] = $prdct;
+        }
+        public function getProducts(){
+            return $this->products;
         }
     }
 ?>

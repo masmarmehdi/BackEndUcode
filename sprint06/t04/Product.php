@@ -5,12 +5,12 @@
         public function __construct($name, $kcal_per_portion){
             $this->name = $name;
             $this->kcal_per_portion = $kcal_per_portion;
-        }
+        } 
         public function getName(){
-            $this->name;
+            return $this->name;
         }
         public function getKcal(){
-            $this->kcal_per_portion;
+            return $this->kcal_per_portion;
         }
     }
 ?>
