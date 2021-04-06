@@ -10,35 +10,23 @@ form {
     justify-content: center;
     align-items: center;
     width: 800px;
-    background-color: rgba(128, 128, 128, 0.1);
     padding: 20px 0;
 }
-.search input[type="url"] {
-    width: 100%;
+input[type="url"] {
+    width: 90%;
 }
-.grid {
+
+div{
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 0px 0px;
-    grid-template-areas:
-      ". ."
-      ". .";
+    grid-template-columns: repeat(2,1fr);
+    gap:10px;
 }
 img {
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: auto;
 }
 span {
     opacity: 0.5;
     font-size: .7em;
     margin-top: 10px;
-}
-span#not {
-    font-size: .9em;
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-drag: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
 }

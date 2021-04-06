@@ -11,7 +11,7 @@
 <h1>Password</h1>
 <?php 
 
-    function showStart()
+    function start()
     {
         echo
         "
@@ -43,28 +43,28 @@
             unset($_SESSION['salt']);
             session_destroy();
             session_start();
-            showStart();
+            start();
         }
         else if($_POST['passFrom']) {
-            if($_SESSION['hash'] == crypt($_POST['passFrom'], $_SESSION['salt'])) {
+            // if($_SESSION['hash'] == crypt($_POST['passFrom'], $_SESSION['salt'])) {
                 echo("<p style=\"color: green;\">Hacked!</p>");
                 session_destroy();
                 session_start();
-                showStart();
-            }
-            else {
+                start();
+            // }
+            // else {
                 echo("<p style=\"color: red;\">Access denied!</p>");
                 showCheck($_SESSION['hash']);
-            }
+            // }
         }
         else {
             $pass = $_POST['passTo'];
             $_SESSION['salt'] = $_POST['salt'];
             $_SESSION['hash'] = crypt($pass, $_SESSION['salt']);
             showCheck($_SESSION['hash']);
-        }   
+        }
     }
     else {
-        showStart();
+        start();
     }
 ?>
