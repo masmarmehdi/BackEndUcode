@@ -1,0 +1,29 @@
+#login{
+    margin: 100px auto;
+    background-color:darkgray;
+    font-size: 20px;
+    text-align: center;
+    width: fit-content;
+    padding:10px;
+}
+.input{
+    padding:5px 10px;
+}
+#submitButton{
+    border: none;
+    background-color: grey;
+    padding:10px 30px;
+    cursor: pointer;
+    
+}
+#submitButton:hover{
+    background-color: black;
+    color:wheat;
+    transition: 0.8s;
+}
+body{
+    background-image: url('image.jpg');
+    background-position: center;
+    background-size: auto;
+    background-repeat: no-repeat;
+}
