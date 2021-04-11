@@ -1,7 +1,7 @@
 <?php
     abstract class Model{
-        private $connection;
-        private $table;
+        protected $connection;
+        protected $table;
 
         public function __construct(){
             setTable();
@@ -16,7 +16,7 @@
             $this->connection = new DatabaseConnection('127.0.0.1', 5500, 'mmasmar', 'securepass', 'ucode_web');
         }
 
-        abstract private function find($id);
-        abstract private function delete();
-        abstract private function save();
+        abstract protected function find($id);
+        abstract protected function delete();
+        abstract protected function save();
     }
